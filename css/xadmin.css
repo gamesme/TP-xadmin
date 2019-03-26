@@ -477,10 +477,6 @@ table th, table td {
     color: #fff;
     /*padding-left: 10px;*/
 }
-.footer .copyright{
-    margin-left: 10px;
-}
-
 
 @media screen and (max-width: 768px){
     .fast-add{

@@ -35,7 +35,7 @@ $stat = Typecho_Widget::widget('Widget_Stat');
               <dd><a href="<?php $options->logoutUrl(); ?>"><?php _e('登出'); ?></a></dd>
             </dl>
           </li>
-          <li class="layui-nav-item to-index"><a target="_blank" href="/">网站</a></li>
+          <li class="layui-nav-item to-index"><a target="_blank" href="/"><?php _e('前台'); ?></a></li>
         </ul>
         
     </div>
@@ -111,7 +111,7 @@ $stat = Typecho_Widget::widget('Widget_Stat');
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe726;</i>
-                    <cite>管理员管理</cite>
+                    <cite>内容管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -160,7 +160,7 @@ $stat = Typecho_Widget::widget('Widget_Stat');
             <li>
                 <a href="javascript:;">
                     <i class="iconfont">&#xe6ce;</i>
-                    <cite>设置</cite>
+                    <cite>管理员设置</cite>
                     <i class="iconfont nav_right">&#xe697;</i>
                 </a>
                 <ul class="sub-menu">
@@ -202,7 +202,6 @@ $stat = Typecho_Widget::widget('Widget_Stat');
                 <a href="<?php $options->logoutUrl(); ?>">
                     <i class="iconfont">&#59434;</i>
                     <cite>注销</cite>
-                    
                 </a>
             </li>
                 </ul>
@@ -231,8 +230,10 @@ $stat = Typecho_Widget::widget('Widget_Stat');
 	
     <!-- 底部开始 -->
     <div class="footer">
-        <div class="copyright">Copyright ©2019 All Rights Reserved</div>
-<div class="copyright">本后台基于<b><a href="http://x.xuebingsi.com/"><font color="White ">X-admin</font></b></a>开发</div>		
+        <div class="copyright">
+            <p style="float:left;padding:0px 20px"> Copyright ©2019 All Rights Reserved </p>
+            <p style="float:right;padding:0px 20px"> Driven By X-admin & Typcho </p>
+        </div>		
     </div>
     <!-- 底部结束 -->
 </body>
