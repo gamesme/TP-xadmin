@@ -24,8 +24,15 @@
 -------
 #### 使用说明
 1. 下载解压
-2. 放置到 Typecho 程序根目录，注意替换掉`var/Typecho/`目录下的 `Menu.php`
-3. 修改config.inc.php中的 `/admin/` 字段为 `/tp-xadmin/`（可以自由重命名此文件夹）
-4. 开始享受此模板吧
+2. 将`tp-xadmin`放置到 Typecho 程序根目录
+3. 替换掉`var/Typecho/`目录下的 `Menu.php`
+4. 修改config.inc.php中的 `/admin/` 字段为 `/tp-xadmin/`（可以自由重命名此文件夹）
+5. 开始享受此模板吧
+
+**PS: 重要的事情说三遍**
+**请手动替换`Menu.php` 替换前建议备份此文件 不要覆盖目录 Linux 的覆盖默认是整个目录覆盖** 
+**请手动替换`Menu.php` 替换前建议备份此文件 不要覆盖目录 Linux 的覆盖默认是整个目录覆盖** 
+**请手动替换`Menu.php` 替换前建议备份此文件 不要覆盖目录 Linux 的覆盖默认是整个目录覆盖** 
+
 
 
