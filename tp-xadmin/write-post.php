@@ -1,7 +1,7 @@
 <?php
 include 'common.php';
 include 'header.php';
-
+include 'menu.php';
 Typecho_Widget::widget('Widget_Contents_Post_Edit')->to($post);
 ?>
 <div class="main">
@@ -10,15 +10,10 @@ Typecho_Widget::widget('Widget_Contents_Post_Edit')->to($post);
         <div class="row typecho-page-main typecho-post-area" role="form">
             <form action="<?php $security->index('/action/contents-post-edit'); ?>" method="post" name="write_post">
                 <div class="col-mb-12 col-tb-9" role="main">
-                    <?php if ($post->draft): ?>
-                        <?php if ($post->draft['cid'] != $post->cid): ?>
-                            <?php $postModifyDate = new Typecho_Date($post->draft['modified']); ?>
-                            <cite class="edit-draft-notice"><?php _e('你正在编辑的是保存于 %s 的草稿, 你也可以 <a href="%s">删除它</a>', $postModifyDate->word(),
-                                    $security->getIndex('/action/contents-post-edit?do=deleteDraft&cid=' . $post->cid)); ?></cite>
-                        <?php else: ?>
-                            <cite class="edit-draft-notice"><?php _e('当前正在编辑的是未发布的草稿'); ?></cite>
-                        <?php endif; ?>
-                        <input name="draft" type="hidden" value="<?php echo $post->draft['cid'] ?>" />
+                    <?php if ($post->draft && $post->draft['cid'] != $post->cid): ?>
+                    <?php $postModifyDate = new Typecho_Date($post->draft['modified']); ?>
+                    <cite class="edit-draft-notice"><?php _e('你正在编辑的是保存于 %s 的草稿, 你也可以 <a href="%s">删除它</a>', $postModifyDate->word(), 
+                    $security->getIndex('/action/contents-post-edit?do=deleteDraft&cid=' . $post->cid)); ?></cite>
                     <?php endif; ?>
 
                     <p class="title">
@@ -50,12 +45,8 @@ Typecho_Widget::widget('Widget_Contents_Post_Edit')->to($post);
                     <?php include 'custom-fields.php'; ?>
 
                     <p class="submit clearfix">
-                        <span class="left">
-                            <button type="button" id="btn-cancel-preview" class="btn"><i class="i-caret-left"></i> <?php _e('取消预览'); ?></button>
-                        </span>
                         <span class="right">
                             <input type="hidden" name="cid" value="<?php $post->cid(); ?>" />
-                            <button type="button" id="btn-preview" class="btn"><i class="i-exlink"></i> <?php _e('预览文章'); ?></button>
                             <button type="submit" name="do" value="save" id="btn-save" class="btn"><?php _e('保存草稿'); ?></button>
                             <button type="submit" name="do" value="publish" class="btn primary" id="btn-submit"><?php _e('发布文章'); ?></button>
                             <?php if ($options->markdown && (!$post->have() || $post->isMarkdown)): ?>
@@ -176,10 +167,12 @@ include 'copyright.php';
 include 'common-js.php';
 include 'form-js.php';
 include 'write-js.php';
+
 Typecho_Plugin::factory('admin/write-post.php')->trigger($plugged)->richEditor($post);
 if (!$plugged) {
     include 'editor-js.php';
 }
+
 include 'file-upload-js.php';
 include 'custom-fields-js.php';
 Typecho_Plugin::factory('admin/write-post.php')->bottom($post);

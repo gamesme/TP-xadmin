@@ -1,6 +1,7 @@
 <?php
 include 'common.php';
 include 'header.php';
+include 'menu.php';
 
 $stat = Typecho_Widget::widget('Widget_Stat');
 $comments = Typecho_Widget::widget('Widget_Comments_Admin');

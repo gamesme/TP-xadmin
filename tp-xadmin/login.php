@@ -41,7 +41,6 @@ include 'header.php';
         </p>
     </div>
 </div>
-
 <?php 
 include 'common-js.php';
 ?>

@@ -1,7 +1,7 @@
 <?php
 include 'common.php';
 include 'header.php';
-
+include 'menu.php';
 
 $actionUrl = $security->getTokenUrl(
     Typecho_Router::url('do', array('action' => 'backup', 'widget' => 'Backup'),

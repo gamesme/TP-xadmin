@@ -1,7 +1,7 @@
 <?php
 include 'common.php';
 include 'header.php';
-
+include 'menu.php';
 
 $stat = Typecho_Widget::widget('Widget_Stat');
 ?>

@@ -1,7 +1,7 @@
 <?php
 include 'common.php';
 include 'header.php';
-
+include 'menu.php';
 
 $phpMaxFilesize = function_exists('ini_get') ? trim(ini_get('upload_max_filesize')) : 0;
 
