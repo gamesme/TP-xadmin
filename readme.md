@@ -1,4 +1,4 @@
-# Typecho-x-admin
+# TP-xadmin
 此模板基于 X-admin 开发
 创意来源 [小凡梦](http://www.xiaofm.cn/index.php/archives/48/)
 本代码基于 MIT 协议开源
@@ -24,7 +24,7 @@
 -------
 #### 使用说明
 1. 下载解压后放置到 Typecho 程序根目录
-2. 修改config.inc.php中的 `/admin/` 字段 `/typecho-x-admin/`（可以自由重命名此文件夹）
+2. 修改config.inc.php中的 `/admin/` 字段为 `/tp-xadmin/`（可以自由重命名此文件夹）
 3. 开始享受此模板吧
 
 
