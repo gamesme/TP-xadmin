@@ -27,7 +27,12 @@ $stat = Typecho_Widget::widget('Widget_Stat');
             <i title="展开左侧栏" class="iconfont">&#xe699;</i>
         </div>
         <ul class="layui-nav right" lay-filter="">
-          <li class="layui-nav-item to-index"><a onclick="x_admin_show('个人信息','<?php $options->adminUrl('profile.php'); ?>')"><?php $user->screenName(); ?></a></li>
+          <li class="layui-nav-item to-index"><a title="<?php
+                    if ($user->logged > 0) {
+                        $logged = new Typecho_Date($user->logged);
+                        _e('最后登录: %s', $logged->word());
+                    }
+                    ?>" onclick="x_admin_show('个人信息','<?php $options->adminUrl('profile.php'); ?>')"><?php $user->screenName(); ?></a></li>
           <li class="layui-nav-item to-index"><a href="<?php $options->logoutUrl(); ?>"><?php _e('登出'); ?></a></li>
           <li class="layui-nav-item to-index"><a target="_blank" href="/"><?php _e('前台'); ?></a></li>
         </ul>
@@ -191,13 +196,7 @@ $stat = Typecho_Widget::widget('Widget_Stat');
                     
                 </ul>
             </li>
-            <?php endif ?>
-            <li>
-                <a href="<?php $options->logoutUrl(); ?>">
-                    <i class="iconfont">&#59434;</i>
-                    <cite>注销</cite>
-                </a>
-            </li>
+                <?php endif ?>
                 </ul>
             </li>
         </ul>
