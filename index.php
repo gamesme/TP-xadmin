@@ -27,14 +27,8 @@ $stat = Typecho_Widget::widget('Widget_Stat');
             <i title="展开左侧栏" class="iconfont">&#xe699;</i>
         </div>
         <ul class="layui-nav right" lay-filter="">
-          <li class="layui-nav-item">
-            <a href="javascript:;"><?php $user->screenName(); ?></a>
-            <dl class="layui-nav-child"> <!-- 二级菜单 -->
-              <dd><a onclick="x_admin_show('个人信息','<?php $options->adminUrl('profile.php'); ?>')">个人信息</a></dd>
-              
-              <dd><a href="<?php $options->logoutUrl(); ?>"><?php _e('登出'); ?></a></dd>
-            </dl>
-          </li>
+          <li class="layui-nav-item to-index"><a onclick="x_admin_show('个人信息','<?php $options->adminUrl('profile.php'); ?>')"><?php $user->screenName(); ?></a></li>
+          <li class="layui-nav-item to-index"><a href="<?php $options->logoutUrl(); ?>"><?php _e('登出'); ?></a></li>
           <li class="layui-nav-item to-index"><a target="_blank" href="/"><?php _e('前台'); ?></a></li>
         </ul>
         
