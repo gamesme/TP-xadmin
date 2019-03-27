@@ -13,13 +13,15 @@
 -------
 #### 截图预览
 管理员（admin）权限
-![admin](https://i.loli.net/2019/03/27/5c9b0c5dc5dcd.jpg)
+![admin](https://i.loli.net/2019/03/27/5c9b3f034159a.jpg)
 编辑（editor）权限
-![editor](https://i.loli.net/2019/03/27/5c9b0c7ee4f51.jpg)
+![editor](https://i.loli.net/2019/03/27/5c9b3f3442e9b.jpg)
+
 贡献者（contributor）权限
-![contributor](https://i.loli.net/2019/03/27/5c9b0ca32cd37.jpg)
+![contributor](https://i.loli.net/2019/03/27/5c9b3f202f09c.jpg)
 关注者（follower）权限
-![user](https://i.loli.net/2019/03/27/5c9b0cb180217.jpg)
+![user](https://i.loli.net/2019/03/27/5c9b3f2953584.jpg)
+
 
 -------
 #### 使用说明
