@@ -23,9 +23,8 @@
 
 -------
 #### 使用说明
-1.下载解压后放置到 Typecho 程序根目录
-2.修改config.inc.php中的 `/admin/` 字段为
-`/typecho-x-admin/`（可以自由重命名此文件夹）
-3.开始享受此模板吧
+1. 下载解压后放置到 Typecho 程序根目录
+2. 修改config.inc.php中的 `/admin/` 字段 `/typecho-x-admin/`（可以自由重命名此文件夹）
+3. 开始享受此模板吧
 
 
